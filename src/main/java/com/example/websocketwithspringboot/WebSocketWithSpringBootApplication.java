@@ -9,8 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@SecurityScheme(name = "user-api", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
-@OpenAPIDefinition(info = @Info(title = "User API", version = "1.0", description = "User Operations and Details"))
+@SecurityScheme(name = "admin-api", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
+@OpenAPIDefinition(info = @Info(title = "WebSocket-With-Spring-Boot", version = "1.0", description = "WebSocket Application with Spring Boot"))
 public class WebSocketWithSpringBootApplication {
 
     public static void main(String[] args) {
