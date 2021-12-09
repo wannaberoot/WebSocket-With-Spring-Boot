@@ -1,13 +1,11 @@
 package com.example.websocketwithspringboot;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "user-api")
 @RequestMapping("/api")
 public class UserController {
 
@@ -18,43 +16,21 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/users")
-    public ResponseEntity<List<User>> getAllUsers(){
-        try {
-            List<User> users = new ArrayList<>();
-
-            if (users.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            } else {
-                userRepository.findAll();
-            }
-
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/listUsers")
+    public Iterable<User> getAllUsers(){
+        return userRepository.findAll();
     }
 
     @PostMapping("/createUser")
-    public ResponseEntity<User> createUser(@RequestParam String userName, @RequestParam String phoneNumber) {
-        try {
-            User user = new User();
-            user.setUserName(userName);
-            user.setPhoneNumber(phoneNumber);
-            userRepository.save(user);
-            return new ResponseEntity<>(user, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public void createUser(@RequestParam String userName, @RequestParam String phoneNumber) {
+        User user = new User();
+        user.setUserName(userName);
+        user.setPhoneNumber(phoneNumber);
+        userRepository.save(user);
     }
 
     @DeleteMapping("/deleteUserById")
-    public ResponseEntity<HttpStatus> deleteUserById(@RequestParam long id) {
-        try {
-            userRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public void deleteUserById(@RequestParam long id) {
+        userRepository.deleteById(id);
     }
 }
