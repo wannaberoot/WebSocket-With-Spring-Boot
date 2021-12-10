@@ -17,7 +17,7 @@ public class UserController {
     }
 
     @GetMapping("/listUsers")
-    public Iterable<User> getAllUsers(){
+    public Iterable<User> listUsers(){
         return userRepository.findAll();
     }
 
