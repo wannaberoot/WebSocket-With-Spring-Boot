@@ -24,7 +24,6 @@ public class UserController {
     @PostMapping("/createUser")
     public void createUser(@RequestParam String userName, @RequestParam String phoneNumber) {
         User user = new User();
-        user.setUserName(userName);
         user.setPhoneNumber(phoneNumber);
         userRepository.save(user);
     }
