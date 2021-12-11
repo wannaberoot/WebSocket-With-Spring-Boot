@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @DeleteMapping("/deleteUserById")
-    public void deleteUserById(@RequestParam long id) {
+    public void deleteUserById(@RequestParam String id) {
         userRepository.deleteById(id);
     }
 }
