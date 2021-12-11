@@ -18,6 +18,8 @@ public class WebSocketBrokerConfiguration implements WebSocketMessageBrokerConfi
 
     @Override
     public void registerStompEndpoints(final StompEndpointRegistry registry) {
-        registry.addEndpoint("/WebSocket").withSockJS();
+        registry.addEndpoint("/WebSocket")
+                .setHandshakeHandler(new UserHandshakeHandler())
+                .withSockJS();
     }
 }
