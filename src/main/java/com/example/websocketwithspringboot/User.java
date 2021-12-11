@@ -8,7 +8,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String userName;
     private String phoneNumber;
 
     public long getId() {
@@ -17,14 +16,6 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getPhoneNumber() {
