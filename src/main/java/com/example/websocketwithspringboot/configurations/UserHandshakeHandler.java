@@ -1,4 +1,4 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.configurations;
 
 import com.sun.security.auth.UserPrincipal;
 import org.springframework.http.server.ServerHttpRequest;

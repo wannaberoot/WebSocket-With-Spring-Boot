@@ -1,4 +1,4 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

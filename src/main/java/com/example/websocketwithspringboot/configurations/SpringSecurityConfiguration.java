@@ -1,4 +1,4 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
