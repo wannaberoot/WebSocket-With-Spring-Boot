@@ -1,47 +1,28 @@
 package com.example.websocketwithspringboot;
 
+import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class CallDetails {
 
     @Id
+    @Setter(AccessLevel.PROTECTED)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String fromWho;
     private String toWhom;
     private String time;
+    private boolean isRead;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFromWho() {
-        return fromWho;
-    }
-
-    public void setFromWho(String fromWho) {
+    public CallDetails(String fromWho, String toWhom) {
         this.fromWho = fromWho;
-    }
-
-    public String getToWhom() {
-        return toWhom;
-    }
-
-    public void setToWhom(String toWhom) {
         this.toWhom = toWhom;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+        this.time = TimeFormatter.getCurrentTimeStamp();
+        this.isRead = false;
     }
 }
