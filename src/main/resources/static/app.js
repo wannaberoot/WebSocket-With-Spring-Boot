@@ -18,7 +18,7 @@ function connect() {
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/messages', function (message) {
+        stompClient.subscribe('/topic/' + $("#number").val(), function (message) {
             showMessages(JSON.parse(message.body).content);
         });
     });
@@ -32,12 +32,8 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function sendNumber() {
-    stompClient.send("/app/message", {}, JSON.stringify({'messageContent': $("#number").val()}));
-}
-
-function showMessages(message) {
-    $("#messages").append("<tr><td>" + message + "</td></tr>");
+function showMessages(notifications) {
+    $("#notifications").append("<tr><td>" + notifications + "</td></tr>");
 }
 
 $(function () {
@@ -46,5 +42,4 @@ $(function () {
     });
     $( "#connect" ).click(function() { connect(); });
     $( "#disconnect" ).click(function() { disconnect(); });
-    $( "#send" ).click(function() { sendNumber(); });
 });
