@@ -5,8 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
-public class ResponseMessage {
+public class Notification {
 
-    @NonNull
     private String content;
 }

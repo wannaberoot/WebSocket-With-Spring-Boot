@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class TimeFormatter {
 
-    private static final String TIME_FORMAT = "dd/MM/yy, HH:mm";
+    private static final String TIME_FORMAT = "dd/MM/yy HH:mm";
 
     public static String getCurrentTimeStamp() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(TIME_FORMAT);
