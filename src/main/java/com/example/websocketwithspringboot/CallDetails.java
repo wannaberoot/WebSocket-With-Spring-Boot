@@ -17,12 +17,10 @@ public class CallDetails {
     private String fromWho;
     private String toWhom;
     private String time;
-    private boolean isRead;
 
     public CallDetails(String fromWho, String toWhom) {
         this.fromWho = fromWho;
         this.toWhom = toWhom;
         this.time = TimeFormatter.getCurrentTimeStamp();
-        this.isRead = false;
     }
 }
