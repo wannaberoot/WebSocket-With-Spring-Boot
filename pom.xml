@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>WebSocket-With-Spring-Boot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>WebSocket-With-Spring-Boot</name>
     <description>WebSocket-With-Spring-Boot</description>
     <properties>
@@ -110,6 +110,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>web-socket-with-spring-boot</finalName>
     </build>
 
 </project>
