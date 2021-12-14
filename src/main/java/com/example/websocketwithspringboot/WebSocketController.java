@@ -36,6 +36,6 @@ public class WebSocketController {
                                      @PathVariable String phoneNumber) {
         Locale locale = new Locale(localeString);
         webSocketService.sendDeliveryReport(phoneNumber, locale);
-        return ("The delivery report have been sent to client.");
+        return ("The delivery report has been sent to client.");
     }
 }
