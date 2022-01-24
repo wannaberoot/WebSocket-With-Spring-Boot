@@ -1,15 +1,18 @@
 # WebSocket-With-Spring-Boot
 WebSocket application with Spring Boot.
 
+## What is WebSocket?
+Web sockets are defined as a two-way communication protocol over a single TCP between the servers and the clients, which mean both the parties, communicate and exchange data at the same time. This protocol defines a full duplex communication from the ground up.
+Using WebSockets is a good way to handle high scale data transfers between server-clients.
 
-# How to Run?
+## How to Run?
 
 ```
 docker pull wannaberoot/web-socket-with-spring-boot
 docker run -p 8080:8080 web-socket-with-spring-boot
 ```
 
-# After Running
+## After Running
 1. After running the application, you can go to the Swagger.
 ```
 http://localhost:8080/swagger-ui/index.html
@@ -31,7 +34,7 @@ http://localhost:8080/
 
 5. After connection, you can now receive notifications by making service request.
 
-# Example
+## Example
 1. After making some calls by /api/makeCall, we can use /api/getMissedCalls to get missed calls informations.
 ![---](/images/image2.png)
 Note: Default language is "tr", you can type "us" if you want to get notifications in English.
