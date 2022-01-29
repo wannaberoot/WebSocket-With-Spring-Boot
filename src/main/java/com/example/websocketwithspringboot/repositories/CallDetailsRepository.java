@@ -1,5 +1,6 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.repositories;
 
+import com.example.websocketwithspringboot.entities.CallDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;

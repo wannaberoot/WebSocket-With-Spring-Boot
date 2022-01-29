@@ -1,4 +1,4 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.entities;
 
 import lombok.*;
 

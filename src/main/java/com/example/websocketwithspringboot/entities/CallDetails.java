@@ -1,5 +1,6 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.entities;
 
+import com.example.websocketwithspringboot.configurations.TimeFormatter;
 import lombok.*;
 import javax.persistence.*;
 

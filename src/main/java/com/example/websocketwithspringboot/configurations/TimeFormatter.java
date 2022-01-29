@@ -1,4 +1,4 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.configurations;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,5 +1,8 @@
-package com.example.websocketwithspringboot;
+package com.example.websocketwithspringboot.services;
 
+import com.example.websocketwithspringboot.entities.CallDetails;
+import com.example.websocketwithspringboot.entities.Notification;
+import com.example.websocketwithspringboot.repositories.CallDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
