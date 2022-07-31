@@ -12,7 +12,7 @@
     <artifactId>WebSocket-With-Spring-Boot</artifactId>
     <version>1.0.0</version>
     <name>WebSocket-With-Spring-Boot</name>
-    <description>WebSocket-With-Spring-Boot</description>
+    <description>WebSocket application with Spring Boot.</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
