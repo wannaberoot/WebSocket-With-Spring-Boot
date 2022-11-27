@@ -49,7 +49,7 @@ In English
 
 ![---](/images/image4.png)
 
-3. Also using /api/send/DeliveryReport, callers can also receive notifications in both Turkish and English that you are available.
+3. Also using /api/sendDeliveryReport, callers can also receive notifications in both Turkish and English that you are available.
 
 ![---](/images/image5.png)
 
