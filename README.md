@@ -26,7 +26,7 @@ Username: admin
 Password: admin
 ```
 
-4. Before making a service request, use should go to following url for browser client and connect with a phone number.
+4. Before making a service request, you should go to following url for browser client and connect with a phone number.
 ```
 http://localhost:8080/
 ```
